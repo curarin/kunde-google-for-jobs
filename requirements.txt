@@ -3,3 +3,4 @@ google-oauth2-tool
 google-api-python-client
 google-auth
 openai
+requests
