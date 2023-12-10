@@ -62,11 +62,7 @@ tab1, tab2 = st.tabs([
     "Step 1: Generate Title |",
     "Step 2: Ping Google"
     ])
-
-
 with tab1:
     tnd.tnd()
-    
-
 with tab2:
     indexnow.indexnow_api_call()

@@ -19,24 +19,6 @@ def tnd():
                 <li>Click on the button "Generate Title and Description Tag" to generate the respective tags via GPT.</li>
                </ul>""", unsafe_allow_html=True)
 
-    ### leere fehler erzeugen, die anschließend durch Multiple Choice befüllt werden
-    job_detail_choosen = ""
-    title_tag_generated_gptversion = ""
-    number_of_elements_for_listicle = 0
-    total_cost_tnd = 0.0
-    title_tag_generated_cost = 0.0
-    descr_tag_generated_cost = 0.0
-    focus_keyword_input = ""
-    title_tag_generated = ""
-    title_tag_generated_length = ""
-    title_tag_length_ok = 0
-    descr_tag_generated = ""
-    descr_tag_generated_length = ""
-    descr_tag_length_ok = ""
-    special_info_template = ""
-
-
-
     ### hier folgen die Input Felder
     st.divider()
     st.markdown("### Provide information")
@@ -82,22 +64,7 @@ def tnd():
         content_prompt_title = f"Write a SEO title tag for the job as a {job_detail_choosen} in {industry_choosen}. Must include {job_detail_choosen}. The Job is located in Germany {location_wanted}. Write in {lang_wanted}."
         #generate title tag
         title_tag_generated, title_tag_generated_cost = gptapi.openAI_content(act_as_prompt_title, content_prompt_title)
-        
-        #generate meta description
-#        descr_tag_generated, descr_tag_generated_cost, descr_tag_generated_gptversion = gptapi.openAI_content(act_as_prompt_descr, content_prompt_descr, gpt_temp_wanted, gpt_version_wanted)
-#        descr_tag_generated_length = len(descr_tag_generated)
-#        if 130 < descr_tag_generated_length < 150:
-#            descr_tag_length_ok = "⚠️ - A bit too short. One could manually add another word here."
-#        elif 160 < descr_tag_generated_length < 165:
-#            descr_tag_length_ok = "⚠️ - may not be displayed in its entirety. No make-or-break issue."
-#        elif 151 < descr_tag_generated_length < 161:
-#            descr_tag_length_ok = "✅ - Length works perfectly fine."
-#        else:
-#            descr_tag_length_ok = "❌ - too long/short. Please clear the cache (press 'C') and regenerate."
-
-        #generate h1 heading
-       #h1_tag_generated, h1_tag_generated_cost, h1_tag_generated_gptversion = gptapi.openAI_content(act_as_prompt_h1, content_prompt_h1, gpt_temp_wanted, gpt_version_wanted)
-
+    
         st.divider()
         st.markdown(f"""<h4>Title Tag for {industry_choosen}-Job in {location_wanted} / Germany</h4>
                         <ul>
@@ -117,16 +84,5 @@ def tnd():
         total_cost_tnd = round(total_cost_tnd, 5)
 
     #bq.to_bigquery("TND Generator", total_cost_tnd, focus_keyword_input, additional_usage_information, lang_wanted)
-
-    ## Template Input - z.B. "Sehenswürdigkeiten" hat ne eigene Struktur, "Urlaubsziele Seite" hat ne eigene Struktur etc.
-    ## Hier Input zum Fokus Keyword / Main Keyword, z.B. "Aktivitäten Amsterdam", steht dann ganz vorne im Title
-    # Input für Jahreszahl - falls leer nicht berücksichtigen
-    # Input für Monat - falls leer nicht berücksichtigen
-    # Gewünschtes Emoji im Title - wenn leer, dann nicht berücksichtigen
-    # Gewünschtes Emoji in der Meta Descrption - wenn leer, nicht berücksichtigen
-
-    ### Hier folgen die Generation Felder
-
-    ### Hier werden die Informationen angezeigt
 
     

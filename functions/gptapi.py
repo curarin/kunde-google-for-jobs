@@ -1,10 +1,8 @@
 import streamlit as st
-import openai
 from openai import OpenAI
 
 ###GPT API KEY
 OPENAI_API_KEY = st.secrets["openai_api_key"]
-openai.api_key = OPENAI_API_KEY
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 ####
@@ -22,7 +20,6 @@ def openAI_content(system_act_as, user_prompt):
     prompt_tokens = response.usage.prompt_tokens
     completion_tokens = response.usage.completion_tokens
     generated_content = response.choices[0].message.content
-    gpt_version_used = response.model
 
     
     cost_per_token_input = 0.001
