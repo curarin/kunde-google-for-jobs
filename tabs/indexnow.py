@@ -14,6 +14,7 @@ def indexnow_api_call():
                 <li>Copy & Paste the clean URL in the following text input field. (1 URL in each line)</li>
                 <li>Press the "Index Now" Button in order to ping Google & Bing for Crawling.</li>
                </ul>""", unsafe_allow_html=True)
+    st.divider()
     domain_name_for_bing = "https://hello-jobs.eu/"
     urls_to_be_pinged = st.text_area("1 URL in each line...",  key = "urls pinged for crawling", height=300)
     urls_to_be_pinged = [urls_to_be_pinged.strip() for urls_to_be_pinged in urls_to_be_pinged.split("\n")]
