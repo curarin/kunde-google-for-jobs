@@ -8,6 +8,12 @@ import time
 def indexnow_api_call():
     # Input field
     st.header("Ping Google & Bing for Crawling")
+    st.markdown("""<ul>
+                <li>Select a job posting URL.</li>
+                <li>Make sure the URL is clean and <b>without</b> any parameters (like utm).</li>
+                <li>Copy & Paste the clean URL in the following text input field.</li>
+                <li>Press the "Index Now" Button in order to ping Google & Bing for Crawling.</li>
+               </ul>""", unsafe_allow_html=True)
     st.write("Paste urls in the following text area (1 URL in each line) and request crawling by pressing the 'Index Now' button.")
     domain_name_for_bing = "https://hello-jobs.eu/"
     urls_to_be_pinged = st.text_area("1 URL in each line...",  key = "urls pinged for crawling", height=300)
