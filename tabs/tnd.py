@@ -10,7 +10,6 @@ import functions.gptapi as gptapi
 #main part of tnd tab
 def tnd():
     st.title("Title Tag Generator")
-    st.subheader("Inspiration for meta tags of your current job posting")
     st.markdown("<h4>Instructions:</h4>", unsafe_allow_html=True)
     st.markdown("""<ul>
                 <li>Select industry.</li>
