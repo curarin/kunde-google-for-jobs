@@ -8,6 +8,7 @@ def sidebar():
     st.markdown("<h3>General information:</h3>", unsafe_allow_html=True)
     st.markdown("""<ul>
                 <li>In order to improve "Google for Jobs" performance we want to make sure Google actually crawls every job published on a regular basis.</li>
+                <li>We also need to make sure that all title tags for the jobs are following the best practise pattern for Google for Jobs. For this case we are using a custom trained GPT3.5-Model.</li>
                 <li>Copy&Pasting the Job URL and Pressing "Index now"-Button pings Google & Bing for a Crawl. This adds the Job URL to the Crawling Queue.</li>
                 </ul>""", unsafe_allow_html=True)
     

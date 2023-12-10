@@ -8,6 +8,7 @@ import time
 def indexnow_api_call():
     # Input field
     st.header("Ping Google & Bing for Crawling")
+    st.markdown("<h4>Instructions:</h4>", unsafe_allow_html=True)
     st.markdown("""<ul>
                 <li>Select a job posting URL.</li>
                 <li>Make sure the URL is clean and <b>without</b> any parameters (like utm).</li>
