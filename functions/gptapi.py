@@ -22,8 +22,8 @@ def openAI_content(system_act_as, user_prompt):
     generated_content = response.choices[0].message.content
 
     
-    cost_per_token_input = 0.001
-    cost_per_token_output = 0.002
+    cost_per_token_input = 0.0030
+    cost_per_token_output = 0.0060
     cost_prompt = prompt_tokens * (cost_per_token_input/1000)
     cost_completion = completion_tokens * (cost_per_token_output/1000)
     total_cost = cost_prompt + cost_completion
