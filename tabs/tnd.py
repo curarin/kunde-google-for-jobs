@@ -54,7 +54,7 @@ def tnd():
 
     with col2_generic_info:
         location_wanted = st.text_input("Provide city of work")
-        lang_wanted = st.selectbox("Choose language", ["English", "Croatian"])
+        lang_wanted = st.selectbox("Choose language", ["English", "German", "Croatian"])
       
     if st.button("Generate now"):
         if job_detail_choosen == "Hub":
