@@ -61,7 +61,7 @@ def tnd():
             job_detail_choosen = ""
         #gpt prompts
         act_as_prompt_title = "You are a SEO specialist, working as a recruiter. Its your job to attract english-speaking employees to work and live in germany. "
-        content_prompt_title = f"Write a SEO title tag for the job as a {job_detail_choosen} in {industry_choosen}. Must include {job_detail_choosen}. Always start with: 'Job in Germany'. The Job is located in Germany {location_wanted}. Write in {lang_wanted}."
+        content_prompt_title = f"Write a SEO title tag for the job as a {job_detail_choosen} in {industry_choosen}. Must include {job_detail_choosen}. The Job is located in Germany {location_wanted}. Write in {lang_wanted}."
         #generate title tag
         title_tag_generated, title_tag_generated_cost = gptapi.openAI_content(act_as_prompt_title, content_prompt_title)
     
